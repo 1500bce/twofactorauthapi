@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TwoFactorAuth.Data.Models;
 
@@ -7,7 +8,8 @@ using TwoFactorAuth.Data.Models;
 
 namespace TwoFactorAuthAPI.Controllers
 {
-    [Route("api/[controller]/[action]")]
+    [Authorize]
+    [Route("api/[controller]")]
     [ApiController]
     public class TwoFactorAuthController : ControllerBase
     {

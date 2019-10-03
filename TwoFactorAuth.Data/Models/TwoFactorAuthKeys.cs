@@ -36,7 +36,7 @@ namespace TwoFactorAuth.Data.Models
             if (!string.IsNullOrEmpty(data.SecretKey) || !string.IsNullOrEmpty(data.Code))
             {
                 TwoFactorAuthenticator tfa = new TwoFactorAuthenticator();
-                response.Success = tfa.ValidateTwoFactorPIN(data.SecretKey, data.Code);
+                response.Success = tfa.ValidateTwoFactorPIN(data.SecretKey, data.Code, TimeSpan.FromSeconds(30));
             }
             if (response.Success)
             {
