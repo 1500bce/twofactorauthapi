@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "TwoFactorAuth";
+}
+
+<div id="qrCode"></div>
+<div id="qrCodeData" data-url="@Html.Raw(@Model.QrCodeImageUrl)"></div>
+
+@section Scripts {
+    <script src="~/lib/qrcode/qrcode.min.js"></script>
+    <script type="text/javascript">
+        new QRCode(document.getElementById("qrCode"),
+            {
+                text: "@Html.Raw(Model.QrCodeImageUrl)",
+                width: 200,
+                height: 200
+            });
+    </script>
+}

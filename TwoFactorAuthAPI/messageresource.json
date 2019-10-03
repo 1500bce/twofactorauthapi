@@ -1,0 +1,6 @@
+{
+  "messages": {
+    "E001": "Verification code is invalid.",
+    "I001": "Verification code is valid."
+  }
+}
