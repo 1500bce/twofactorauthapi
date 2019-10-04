@@ -8,8 +8,7 @@ using TwoFactorAuth.Data.Models;
 
 namespace TwoFactorAuthAPI.Controllers
 {
-    [Authorize]
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class TwoFactorAuthController : ControllerBase
     {
