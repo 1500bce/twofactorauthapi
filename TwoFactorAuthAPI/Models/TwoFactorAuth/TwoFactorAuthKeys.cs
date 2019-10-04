@@ -14,7 +14,7 @@ namespace TwoFactorAuthAPI.TwoFactorAuth.Models
             Response model = new Response();
             TwoFactorAuthenticator tfa = new TwoFactorAuthenticator();
             tfa.DefaultClockDriftTolerance = TimeSpan.FromSeconds(settings.TOTPTimeout);
-            var setupInfo = tfa.GenerateSetupCode("BlotocolPH", email, secretKey, 300, 300);
+            var setupInfo = tfa.GenerateSetupCode(settings.Issuer, email, secretKey, 300, 300);
             model.Object = new GenerateKeyResponse(setupInfo.ManualEntryKey, setupInfo.QrCodeSetupImageUrl.ForceHttps(), secretKey);
             model.Success = true;
             return model;   
