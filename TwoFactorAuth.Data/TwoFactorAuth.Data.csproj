@@ -14,4 +14,8 @@
     <PackageReference Include="GoogleAuthenticator" Version="1.2.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TwoFactorAuth.Core\TwoFactorAuth.Core.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TwoFactorAuth.Data.Models
+﻿namespace TwoFactorAuth.Core.Responses
 {
     public class Response : BaseResponse
     {

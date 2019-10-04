@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace TwoFactorAuth.Core.Helpers.Extensions
+﻿namespace TwoFactorAuth.Core.Helpers.Extensions
 {
     public static class StringExtension
     {
-        public static bool HasValue(this string value)
+        public static string ForceHttps(this string value)
         {
-            return !string.IsNullOrWhiteSpace(value);
+            return value.Replace("http", "https");
         }
+
+        public static string ConstructMessage(this string message, string value)
+        {
+            return string.Format(message, value);
+        } 
     }
 }
